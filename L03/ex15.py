@@ -2,6 +2,16 @@ n=input("Escreva um número\n-> ")
 print(n + n[::-1])
 
 # Without string concatenation (n[::-1] is string slicing and concatenation)
+# v2
+n = int(input("Escreva um número\n-> "))
+result = n
+while n > 0:
+    digito = n % 10                  # retrieve último dígito
+    n //= 10                         # remove último dígito
+    result = result * 10 + digito    # append dígito à resposta
+print(result)
+
+# v1 (worse)
 n = int(input("Escreva um número\n-> "))
 left = n
 right = 0
