@@ -40,13 +40,21 @@ Seja um número de 3 dígitos abc tal que a diferença entre o primeiro e o últ
 Seja i a diferença entre c e a, ou seja, i = |a - c| (i>=2).
 ni = cba
 ns = |abc - cba| = |100a + 10b + c - (100c + 10b + a)| = |99a - 99c| = 99|a - c| = 99i
-nsi = |999 - ns| = |999 - 99i| = 99(11 - i) (|999 - ns| caso ns tenha 3 dígitos, o que é verdade pois i>=2*)
-Portanto, ns + nsi = 99i + 99(11 - i) = 99 * 11 = 1089.
+
+99i = 100i - i = 100i - 100 + 100 - i = 100(i - 1) + 100 - i = 100(i - 1) + 90 + (10 - i) = 100(i - 1) + 10*9 + (10 - i);
+ns: [(x, y, z) = (i - 1, 9, 10 - i)]*
+
+nsi = (10 - i, 9, i - 1) = 100(10-i) + 90 + i - 1 = 1000 - 100i + 90 + i - 1 = 1089 - 99i
+Portanto, ns + nsi = 99i + 1089 - 99i = 1089
 Portanto, a função retorna sempre 1089.
 
-*(Se ns tivesse 2 dígitos ou um dígito, respetivamente seria, nsi = |99 - ns| e nsi = |9 - ns|, que altera o resultado final)
-(ns tem dois dígitos se i=1 e um dígito se i=0, daí a condição i>=2)
+*
+((x, y, z) são respetivamente os dígitos das centenas, dezenas e unidades de ns)
+(Caso i seja 1 ou 0, ns teria 2 dígitos ou um dígito, respetivamente)
+(Nesses casos, o resultado final será diferente ou zero)
 """
 
-# Juro que cheguei a estas conclusões sem chatgpt :D (ja tinha feito isto antes)
+# Juro que cheguei a estas conclusões sem chatgpt :D (ja tinha feito isto antes, parecido)
+# Afinal precisei :P (não lembrava bem)
+
 
