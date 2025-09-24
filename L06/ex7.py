@@ -8,6 +8,8 @@ def amigas(amiga1: str, amiga2: str)->bool:
         return False
     return True
 
+# using max and min only helps for if the words dont have the same length
+
 # Test the function
 if __name__ == "__main__":
     print("Introduza duas palavras não vazias\n(-1 to exit)")
