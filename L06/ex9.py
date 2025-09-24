@@ -8,9 +8,9 @@ def reconhece(str:str)->bool:
     while i < len(str) and str[i] in "1234":
         i += 1
     numeros = i - letras
-    if numeros == 0:     # No numbers exist
+    if numeros == 0:     # No numbers exist after the letters
         return False 
-    return i == len(str) # There is nothing else after the last numbers
+    return i == len(str) # Is there is nothing else after the last numbers
 
 # Test the function
 if __name__ == "__main__":
