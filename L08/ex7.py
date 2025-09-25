@@ -10,8 +10,9 @@ def multiplica_mat(matriz1:list[list[int]], matriz2:list[list[int]])->list[list[
             if len(matriz1[0]) != len(matriz2):
                 raise ValueError("multiplica_mat: as matrizes não são m x n e n x r, respetivamente")
             soma = 0                                    # cada elemento da matriz_resultante vai ser a soma da multiplicação
-            for n in range(len(matriz2)):               # por cada coluna da primeira/linha da segunda matriz
-                soma += matriz1[m][n] * matriz2[n][r]   # a parte da multiplicação entre elementos da linha m e coluna n, somados
+            for n in range(len(matriz2)):               # por cada coluna da primeira matriz
+          # for n in range(len(matriz1[0]))             # por cada linha da segunda matriz
+                soma += matriz1[m][n] * matriz2[n][r]   # a parte da multiplicação entre elementos da linha m e coluna r, somados
             linha.append(soma)                          # cada elemento é a soma das diferentes multiplicações (len(linha) = r)
         matriz_resultante.append(linha)                 # a matriz resultante é a lista de linhas (m x r)
     return matriz_resultante
