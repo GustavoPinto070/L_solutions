@@ -10,7 +10,7 @@ def reconhece(str:str)->bool:
     numeros = i - letras
     if numeros == 0:     # No numbers exist after the letters
         return False 
-    return i == len(str) # Is there is nothing else after the last numbers
+    return i == len(str) # Is there is anything else after the last numbers
 
 # Test the function
 if __name__ == "__main__":
