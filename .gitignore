@@ -1,5 +1,6 @@
 # keeping my project private
 P1/FP2526P1.py
+P1/FP2526P1_base.py
 
 # ignore pycache
 __pycache__/
