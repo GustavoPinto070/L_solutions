@@ -1,0 +1,8 @@
+# keeping my project private
+P1/FP2526P1.py
+
+# ignore pycache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
