@@ -1,9 +1,9 @@
 def escreve_matriz(matriz:list[list[int]]):
     resultado = ""
     for i in range(len(matriz)):
-        resultado += "\n"
         for j in range(len(matriz[i])):
-            resultado += str(matriz[i][j]) + " "
+            resultado += "{:<5}".format(matriz[i][j]) # f"{matriz[i][j]:<5}"
+        resultado += "\n"
     print(resultado)
 
 if __name__ == "__main__":
