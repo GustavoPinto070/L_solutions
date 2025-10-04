@@ -1,16 +1,13 @@
 def euromilhoes() -> list[list[int]]:
-    
     def inteiro_aleatorio(start: int, stop: int) -> int:
         from random import random
         """
         random = [0, 1[
         0 <= r < 1
         0 <= r < distancia + 1 (se distancia = 49, 50)
-        0.5 <= r < distancia + 1.5 (se start = 1)
-        int(0.5 <= r < 49 + 1.5) <=> 1 <= r <= 50
-        com todos os elementos com probabilidade igual
+        int(1 <= r < 51) <=> 1 <= r <= 50 (r ∈ N)
         """
-        return int(random()*(stop - start + 1) + start - 0.5)
+        return int(random()*(stop - start + 2) + start)
     
     def lista_inteiros_unicos_aleatorios(num_elementos: int, start: int, stop: int) -> list[int]:
         nums = []
@@ -25,4 +22,5 @@ def euromilhoes() -> list[list[int]]:
     return [numeros, estrelas]
 
 if __name__ == "__main__":
-    print("\n".join(str(euromilhoes()) for _ in range(99)))
+    amount = int(input("How many? (int) "))
+    print("\n".join(str(euromilhoes()) for _ in range(amount)))
