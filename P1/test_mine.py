@@ -376,7 +376,7 @@ def test_processa_jogada_troca_insufficient_pilha_then_pass(monkeypatch):
     """
     conj = fp.cria_conjunto(('A',), (1,))
     jogador = fp.cria_jogador(1, 0, conj)
-    pilha = ['X', 'Y']  # <7
+    pilha = ['A', 'B']  # <7
     # Primeiro tenta trocar (ignorado porque pilha <7), depois passa
     monkeypatch.setattr(builtins, 'input', FakeInput(["T A", "P"]))
     tab = fp.cria_tabuleiro()
