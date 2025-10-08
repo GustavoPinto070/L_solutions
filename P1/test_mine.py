@@ -376,7 +376,7 @@ def test_processa_jogada_troca_insufficient_pilha_then_pass(monkeypatch):
     """
     conj = fp.cria_conjunto(('A',), (1,))
     jogador = fp.cria_jogador(1, 0, conj)
-    pilha = ['X', 'Y']  # <7
+    pilha = ['A', 'B']  # <7
     # Primeiro tenta trocar (ignorado porque pilha <7), depois passa
     monkeypatch.setattr(builtins, 'input', FakeInput(["T A", "P"]))
     tab = fp.cria_tabuleiro()
@@ -393,7 +393,7 @@ def test_processa_jogada_joga_palavra_valida(monkeypatch):
     conj = fp.cria_conjunto(('C','A','O'), (1,1,1))
     jogador = fp.cria_jogador(1, 0, conj)
     # pilha com letras para repor
-    pilha = ['Z','Y','X']
+    pilha = ['A','B','C']
     # pontos por letra usados na soma
     pontos = {'C':3, 'A':1, 'O':1}
     # Simular a jogada que coloca "CAO" com ponto de aplicação (8,8) horizontal
